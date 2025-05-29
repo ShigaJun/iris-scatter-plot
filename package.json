@@ -1,0 +1,23 @@
+{
+  "name": "iris-scatter-plot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bulma": "^1.0.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.0",
+    "vite": "^6.3.5"
+  }
+}
