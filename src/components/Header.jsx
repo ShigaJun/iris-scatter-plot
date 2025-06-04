@@ -1,7 +1,7 @@
 export default function Header() {
     return (
         <header className="header">
-            <h1 className="title">Title</h1>
+            <h1 className="title">scatter plot of iris data</h1>
         </header>
     );
 }
