@@ -18,13 +18,13 @@ export default function ScatterPlot({ data, xScale, yScale }) {
     // speciesの表示切替関数
     const toggleSpecies = (sp) => {
         setHiddenSpecies((prev) => {
-        const newSet = new Set(prev);
-        if (newSet.has(sp)) {
-            newSet.delete(sp);
-        } else {
-            newSet.add(sp);
-        }
-        return newSet;
+            const newSet = new Set(prev);
+            if (newSet.has(sp)) {
+                newSet.delete(sp);
+            } else {
+                newSet.add(sp);
+            }
+            return newSet;
         });
     };
 
@@ -35,7 +35,8 @@ export default function ScatterPlot({ data, xScale, yScale }) {
         <svg width={width} height={height}>
             <g transform={`translate(${padding}, ${padding})`}>
                 <Points
-                    data={filteredData}
+                    data={data}
+                    hiddenSpecies={hiddenSpecies}
                     xScale={xScale}
                     yScale={yScale}
                     color={color}
@@ -43,7 +44,6 @@ export default function ScatterPlot({ data, xScale, yScale }) {
                 <XAxis 
                     scale={xScale}
                     transform={`translate(0, 400)`}
-                    // transform={`translate(${padding}, ${height - padding * 1.5})`}
                 />
                 <YAxis
                     scale={yScale}
