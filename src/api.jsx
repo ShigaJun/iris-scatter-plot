@@ -3,5 +3,9 @@ export async function fetchIris(species) {
     `https://s3-us-west-2.amazonaws.com/s.cdpn.io/2004014/iris.json`
   );
   const data = await response.json();
+  for (let i = 0; i < data.length; i++){
+    data[i].id = i;
+  }
+  console.log(data);
   return data;
 }

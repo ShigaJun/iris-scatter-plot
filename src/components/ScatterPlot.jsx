@@ -5,14 +5,16 @@ import XAxis from "./XAxis";
 import YAxis from "./YAxis";
 import Legend from "./Legend";
 
+
+
 export default function ScatterPlot({ data, xScale, yScale }) {
     const width = 600;
     const height = 600;
     const padding = 60;
 
-    const color = d3.scaleOrdinal(d3.schemeAccent);
     const speciesSet = new Set(data.map(d => d.species));
     const speciesArray = Array.from(speciesSet);
+    const color = d3.scaleOrdinal(speciesArray, d3.schemeAccent);
     const [hiddenSpecies, setHiddenSpecies] = useState(new Set());
 
     // speciesの表示切替関数

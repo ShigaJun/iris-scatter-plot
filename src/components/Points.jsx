@@ -3,7 +3,7 @@ export default function Points({ data, xScale, yScale, color }) {
         <g>
             {data.map((d, i) => (
                 <circle
-                    key={i}
+                    key={d.id}
                     cx={xScale(d.x)}
                     cy={yScale(d.y)}
                     r={5}
