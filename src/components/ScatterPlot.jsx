@@ -7,7 +7,7 @@ import Legend from "./Legend";
 
 export default function ScatterPlot({ data, xScale, yScale }) {
     const width = 600;
-    const height = 500;
+    const height = 600;
     const padding = 60;
 
     const color = d3.scaleOrdinal(d3.schemeAccent);
@@ -42,11 +42,12 @@ export default function ScatterPlot({ data, xScale, yScale }) {
                 />
                 <XAxis 
                     scale={xScale}
-                    transform={`translate(${padding}, ${height - padding * 1.5})`}
+                    transform={`translate(0, 400)`}
+                    // transform={`translate(${padding}, ${height - padding * 1.5})`}
                 />
                 <YAxis
                     scale={yScale}
-                    transform={`translate(${padding}, 0)`}
+                    transform={`translate(0, 0)`}
                 />
                 <Legend 
                     species={speciesArray} 
